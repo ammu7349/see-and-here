@@ -1,0 +1,10 @@
+{
+  "name": "See & Hear — Sensory Vision Companion",
+  "description": "An accessible tactile and auditory spatial awareness companion powered by Gemini vision, with real-time room navigation, speech narration, and sound radar.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

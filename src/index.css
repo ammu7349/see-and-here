@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Atkinson Hyperlegible Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-surface: #f4fbf7;
+  --color-surface-dim: #d4dcd8;
+  --color-surface-bright: #f4fbf7;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef5f1;
+  --color-surface-container: #e8efec;
+  --color-surface-container-high: #e3eae6;
+  --color-surface-container-highest: #dde4e0;
+  --color-on-surface: #161d1b;
+  --color-on-surface-variant: #414844;
+  --color-inverse-surface: #2b322f;
+  --color-inverse-on-surface: #ebf2ee;
+  --color-outline: #717974;
+  --color-outline-variant: #c1c8c3;
+  --color-surface-tint: #416656;
+  --color-primary: #002116;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #12372a;
+  --color-on-primary-container: #7ba190;
+  --color-inverse-primary: #a8cfbd;
+  --color-secondary: #006c53;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #95f1d0;
+  --color-on-secondary-container: #007057;
+  --color-tertiary: #002111;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #003921;
+  --color-on-tertiary-container: #15ae70;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #c3ebd8;
+  --color-primary-fixed-dim: #a8cfbd;
+  --color-on-primary-fixed: #002116;
+  --color-on-primary-fixed-variant: #2a4e3f;
+  --color-secondary-fixed: #98f4d3;
+  --color-secondary-fixed-dim: #7cd8b8;
+  --color-on-secondary-fixed: #002117;
+  --color-on-secondary-fixed-variant: #00513e;
+  --color-tertiary-fixed: #78fbb6;
+  --color-tertiary-fixed-dim: #59de9b;
+  --color-on-tertiary-fixed: #002111;
+  --color-on-tertiary-fixed-variant: #005232;
+  --color-background: #f4fbf7;
+  --color-on-background: #161d1b;
+  --color-surface-variant: #dde4e0;
+}
+
+@layer base {
+  html, body {
+    width: 100vw;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f4fbf7;
+    color: #161d1b;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  
+  button:focus-visible, a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px #006c53;
+  }
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  --color-surface: #000000;
+  --color-background: #000000;
+  --color-on-surface: #ffffff;
+  --color-on-background: #ffffff;
+  --color-surface-container-lowest: #0c0c0c;
+  --color-surface-container-low: #151515;
+  --color-surface-container: #1e1e1e;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #383838;
+  --color-primary: #00ff88;
+  --color-on-primary: #000000;
+  --color-secondary: #00e5a3;
+  --color-secondary-container: #003823;
+  --color-on-secondary-container: #00ffaa;
+  --color-on-surface-variant: #e0e0e0;
+  filter: contrast(1.15);
+}
+
+html.high-contrast body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Text Size Variations */
+html.text-size-lg {
+  font-size: 112%;
+}
+
+html.text-size-xl {
+  font-size: 125%;
+}
+
+/* Material Symbols alignment */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
